@@ -23,6 +23,8 @@ This project aims to analyze employer-provided job posting data to identify esse
 A link to our prposed timeline can be found [here](https://gtvault-my.sharepoint.com/:x:/g/personal/achennak3_gatech_edu/EQ1QSjaV_FNAkyNbvHxFvkIBXh1E5bZUPvVsOEeYK_luOQ?e=4OJZDS)
 # Contribution Table
 
+<div align="center">
+
 | Task                             | Contributing Team Members(s)    |
 |:---------------------------------|--------------------------------:|
 | Research Potential Datasets      | Akul, Alex, Bao, Nikhil         |
@@ -38,6 +40,8 @@ A link to our prposed timeline can be found [here](https://gtvault-my.sharepoint
 | Create Presentation              | Akul, Bao, Nikhil               |
 | Record/Edit/Upload Presentation  | Akul, Nikhil                    |
 | Github Page Creation/Management  | Ayush                           |
+
+</div>
 
 # Checkpoint
 Here is the link to our [dataset](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings)
