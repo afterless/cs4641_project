@@ -20,7 +20,7 @@ For our data preprocessing and analysis, we will employ a set of common Python l
 
 This project aims to analyze employer-provided job posting data to identify essential information for potential applicants, aiding their decision-making process. The primary objective is to predict salary based on factors like skills, role descriptions, and job titles. Model effectiveness will be assessed using scikit-learn metrics. This includes absolute error and F1 scores for salary-range classifications and $R^2$ scores for a regression fit, representing quantifiable feedback on model performance [4]. Feature importance scoring will highlight crucial parameters. These metrics will give a holistic yet quantitative performance evaluation, which will guide continuous model refinement. 
 # Proposed Timeline
-A link to our prposed timeline can be found [here](https://gtvault-my.sharepoint.com/:x:/g/personal/achennak3_gatech_edu/EQ1QSjaV_FNAkyNbvHxFvkIBXh1E5bZUPvVsOEeYK_luOQ?e=4OJZDS)
+A link to our proposed timeline can be found [here](https://gtvault-my.sharepoint.com/:x:/g/personal/achennak3_gatech_edu/EQ1QSjaV_FNAkyNbvHxFvkIBXh1E5bZUPvVsOEeYK_luOQ?e=4OJZDS)
 # Contribution Table
 
 | Task                             | Contributing Team Members(s)    |
