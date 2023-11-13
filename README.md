@@ -39,10 +39,10 @@ The input data was divided into training and testing datasets. Starting with the
 
 Model 1 did not contain additional NLP text preprocessing, while Model 2 had this preprocessing applied to its dataset. To assess the accuracy of our predictions, we utilized mean squared error (MSE) and the $R^2$ score as metrics (values tabulated below). Concerning MSE, the first model yielded a value of approximately 11,819,496,235, while the second model yielded a slightly lower value of about 11,795,359,993. These large, squared error values between our predictions and the true labels indicated suboptimal model performance, as they significantly deviate from the true values. A lower error would suggest a better-fitting model to the true values. Examining the $R^2$ score, both models obtained a value of around -2.68. This outcome is unfavorable for this metric since it is negative, indicating that our model performs worse than a constant model that merely predicts the average salary, as such model would have an $R^2$ score of 0.  
 
-| Model    | MSE Value         | R2 Value   |
-|----------|-------------------|------------|
-| Model 1  | 11819496235.36642 | -2.683982  |
-| Model 2  | 11795359992.82888 | -2.676459  |
+| Model    | MSE Value         | $R^2$ Value   |
+|----------|-------------------|---------------|
+| Model 1  | 11819496235.36642 | -2.683982     |
+| Model 2  | 11795359992.82888 | -2.676459     |
 
 Below is a scatter plot that compares the true label values (salaries) and the predictions for the first model:
 ![image](./res/true_pred_scatter_1.png)
@@ -52,7 +52,7 @@ Below is a similar scatter plot for the second model. Since the same random seed
 
 Currently, the model is outputting roughly a constant value for all test data points for both models, even though the true labels clearly are not all the same values.  
 
-Upon analysis of the visualizations and computed metrics, the discrepancies present in our predictions indicate poor performance of our models at the moment. The models are seemingly predicting salaries as a roughly constant value, with both the MSE and R2 values underscoring the extent of their poor performance. This points to underlying issues within the code that require attention. While the second model exhibits a marginally better performance than the first, both models display deviations of similar magnitudes, suggesting a deeper underlying reason for their current performance levels.
+Upon analysis of the visualizations and computed metrics, the discrepancies present in our predictions indicate poor performance of our models at the moment. The models are seemingly predicting salaries as a roughly constant value, with both the MSE and $R^2$ values underscoring the extent of their poor performance. This points to underlying issues within the code that require attention. While the second model exhibits a marginally better performance than the first, both models display deviations of similar magnitudes, suggesting a deeper underlying reason for their current performance levels.
 
 For our next steps, we intend to delve deeper into the potential issues associated with the training process, ensuring there are no data discrepancies. One possible idea would be to normalize and standardize the data, which could potentially enhance the models’ performance. Additionally, we will explore the choice of loss function employed in the regression models. Shifting from MSE to L1 loss or an alternative loss function may yield improved results, enhancing overall model performance. To facilitate a more thorough investigation, we plan to use a small subset of our dataset for testing. This approach will allow for a more manageable testing environment, providing insights into why the models are currently performing so poorly. With these new insights, we aim to implement enhancements that will lead to improved model performance for the final report.
 
@@ -62,13 +62,13 @@ A link to our proposed timeline can be found [here](https://gtvault-my.sharepoin
 
 # Contribution Table
 
-| Team Member | Contributions                                                                        |
-|-------------|--------------------------------------------------------------------------------------|
-| Akul        | Data preprocessing, report analysis/results section, model building, methods         |
-| Alex        | Report analysis/results section, results visualization, Gantt Chart                  |
-| Ayush       | Report analysis/results section, GitHub page management, model building              |
-| Bao         | Report analysis/results section, R^2 metric research, metrics analysis, introduction |
-| Nikhil      | Researching metrics, Report analysis/results section                                 |
+| Team Member | Contributions                                                                          |
+|-------------|----------------------------------------------------------------------------------------|
+| Akul        | Data preprocessing, report analysis/results section, model building, methods           |
+| Alex        | Report analysis/results section, results visualization, Gantt Chart                    |
+| Ayush       | Report analysis/results section, GitHub page management, model building                |
+| Bao         | Report analysis/results section, $R^2$ metric research, metrics analysis, introduction |
+| Nikhil      | Researching metrics, Report analysis/results section                                   |
 
 # References
 
