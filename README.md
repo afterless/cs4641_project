@@ -37,17 +37,17 @@ The input data was divided into training and testing datasets. Starting with the
 
 # Results & Discussions
 
-Model 1 did not contain additional NLP text preprocessing, while Model 2 had this preprocessing applied to its dataset. To assess the accuracy of our predictions, we utilized mean squared error (MSE) and the R2 score as metrics (values tabulated below). As an AI article from Medium states, “R-Squared describes how well a model fits for a linear regression model. The higher R, the better the fit” [4]. Since regression is the exact purpose of these models and it is important to quantify goodness of fit, R2 score was a great choice for this use-case. The article also mentions that the MSE calculation involves “distance between the actual point and the predicted point” [4] which also helps to quantify the prediction performance of these regression models. In addition, the mean and median absolute errors were measured. This provided a dollar amount of how off the predictions were compared to their true values.
+Model 1 did not contain additional NLP text preprocessing, while Model 2 had this preprocessing applied to its dataset. To assess the accuracy of our predictions, we utilized mean squared error (MSE) and the $R^2$ score as metrics (values tabulated below). As an AI article from Medium states, “R-Squared describes how well a model fits for a linear regression model. The higher R, the better the fit” [4]. Since regression is the exact purpose of these models and it is important to quantify goodness of fit, $R^2$ score was a great choice for this use-case. The article also mentions that the MSE calculation involves “distance between the actual point and the predicted point” [4] which also helps to quantify the prediction performance of these regression models. In addition, the mean and median absolute errors were measured. This provided a dollar amount of how off the predictions were compared to their true values.
 
 The two models were tested across 5 learning rates: 1e-6, 5e-6, 1e-5, 5e-5, and 1e-4. We chose to use the AdamW for its state of the part performance and various heuristics it uses for better first order updates. Once the training was complete, the model’s performance was measured on the test set. We created scatter plots to display the predictions of each model compared to the true values, where were sorted in increasing order. These plots for each learning rate and model can be found in the Appendix.
 
-Looking into the performance of the first model, the highest R2 value was achieved using a learning rate of 5e-6, resulting in approximately 0.642. This run also had the lowest MSE. But, using a learning rate of 5e-5 resulted in lower mean and median absolute values, approximately $24,000 and $14,000 respectively. Besides the learning rate, the random seed used can have a drastic impact on fine-tuning performance. It is interesting to see that there is not a single specific set of hyperparameters that optimizes all metrics for model 1. This means that we need to utilize different models if we want to optimize performance for different specific metrics.
+Looking into the performance of the first model, the highest $R^2$ value was achieved using a learning rate of 5e-6, resulting in approximately 0.642. This run also had the lowest MSE. But, using a learning rate of 5e-5 resulted in lower mean and median absolute values, approximately \\\$24,000 and \\\$14,000 respectively. Besides the learning rate, the random seed used can have a drastic impact on fine-tuning performance. It is interesting to see that there is not a single specific set of hyperparameters that optimizes all metrics for model 1. This means that we need to utilize different models if we want to optimize performance for different specific metrics.
 
-For the second model, the highest R2 value was achieved using a learning rate of 1e-5, resulting in approximately 0.654. This run also had the lowest MSE value, mean absolute error (~\\\$23700), and median absolute error (~\\\$17000). Figure
+For the second model, the highest $R^2$ value was achieved using a learning rate of 1e-5, resulting in approximately 0.654. This run also had the lowest MSE value, mean absolute error (~\\\$23700), and median absolute error (~\\\$17000). Figure
 
-Comparing between models 1 and 2, model 2 performs slightly better with a higher R2 score and lower MSE value. There is not a considerable difference, though. Because model 2 required extra text preprocessing for very minimal improvement in performance, this experiment shows that this might not be worth the extra computational resources needed to do that extra preprocessing. Although this preprocessing can reduce the complexity of the data, some of the nuance that can be present in complete sentences will be lost. This nuance and contextualization can be captured by BERT, which is one of its highlights as a transformer-based model [5]. So, this could potentially be a limitation for model 2.  
+Comparing between models 1 and 2, model 2 performs slightly better with a higher $R^2$ score and lower MSE value. There is not a considerable difference, though. Because model 2 required extra text preprocessing for very minimal improvement in performance, this experiment shows that this might not be worth the extra computational resources needed to do that extra preprocessing. Although this preprocessing can reduce the complexity of the data, some of the nuance that can be present in complete sentences will be lost. This nuance and contextualization can be captured by BERT, which is one of its highlights as a transformer-based model [5]. So, this could potentially be a limitation for model 2.  
 
-Looking at the visualizations, we can see that some of the models seem to have a straight horizontal line through the middle. These only occur at certain learning rates for both models. Upon inspection of the metrics, it can be seen that these specific models have negative R2 scores, and the other metrics reflect similar diminished performances. This shows that the model has failed to converge properly when trained using those learning rates. These learning rates were on the higher end of the different learning rates tested, which means those serve as upper bounds as to what learning rates can be used to train these models.
+Looking at the visualizations, we can see that some of the models seem to have a straight horizontal line through the middle. These only occur at certain learning rates for both models. Upon inspection of the metrics, it can be seen that these specific models have negative $R^2$ scores, and the other metrics reflect similar diminished performances. This shows that the model has failed to converge properly when trained using those learning rates. These learning rates were on the higher end of the different learning rates tested, which means those serve as upper bounds as to what learning rates can be used to train these models.
 
 Next steps would include continued testing beyond the hyperparameters tested here. Due to time constraints, we were not able to explore and test everything that we wanted to. We could test other learning rates, introduce learning rate schedulers (i.e. Exponential LR), vary the number of epochs, vary the batch size, and look into other kinds of loss functions, such as L1 loss. In addition, the actual split between training and test data could be explored. For our project, we did a standard 80/20 split between training and testing, there are other combinations of these that could increase the different metrics. As it goes with any deep learning project, the more data that we can use for training, the better our model will perform. Since the Kaggle dataset we utilized seems to be updated on a regular basis with more job listings, an updated dataset could easily be replaced with our current dataset to test and improve our model so that it would be able to better predict the expected salary of a LinkedIn job posting.
 
@@ -55,7 +55,7 @@ Next steps would include continued testing beyond the hyperparameters tested her
 
 ## Model 1 (No Additional Preprocessing) Tuning: Varying Learning Rate
 
-| Learning Rate | Epochs | MSE           | R2     | Mean Absolute Error ($) | Median Absolute Error ($) |
+| Learning Rate | Epochs | MSE           | $R^2$     | Mean Absolute Error ($) | Median Absolute Error ($) |
 |---------------|--------|---------------|--------|-------------------------|---------------------------|
 | 1e-6          | 3      | 1856397602.94 | 0.4508 | 31219.01                | 23715.16                  |
 | 5e-6          | 3      | 1210854155.33 | 0.6418 | 24347.40                | 19120.54                  |
@@ -65,7 +65,7 @@ Next steps would include continued testing beyond the hyperparameters tested her
 
 ## Model 2 (Additional Preprocessing) Tuning: Varying Learning Rate
 
-| Learning Rate | Epochs | MSE ($)       | R2     | Mean Absolute Error ($) | Median Absolute Error ($) |
+| Learning Rate | Epochs | MSE ($)       | $R^2$     | Mean Absolute Error ($) | Median Absolute Error ($) |
 |---------------|--------|---------------|--------|-------------------------|---------------------------|
 | 1e-6          | 3      | 2076148594.95 | 0.4055 | 34694.81                | 28746.05                  |
 | 5e-6          | 3      | 1743682927.79 | 0.5007 | 27525.10                | 18507.96                  |
@@ -75,7 +75,7 @@ Next steps would include continued testing beyond the hyperparameters tested her
 
 ## Optimal Models
 
-| Model   | MSE Value     | R2 Value |
+| Model   | MSE Value     | $R^2$ Value |
 |---------|---------------|----------|
 | Model 1 | 1210854155.33 | 0.6418   |
 | Model 2 | 1207458796.61 | 0.6542   |
@@ -92,8 +92,8 @@ A link to our proposed timeline can be found [here](https://gtvault-my.sharepoin
 | Akul        | Data preprocessing, report analysis/results section, model building, methods, testing, creating slides, recording, video editing  |
 | Alex        | Report analysis/results section, results visualization, Gantt Chart, testing, creating slides, recording |
 | Ayush       | Report analysis/results section, GitHub page management, model building, recording                       |
-| Bao         | Report analysis/results section, R2 metric research, metrics analysis, introduction, creating slides     |
-| Nikhil      | Researching metrics, R2 metric research, Report analysis/results section, creating slides, recording     |
+| Bao         | Report analysis/results section, $R^2$ metric research, metrics analysis, introduction, creating slides     |
+| Nikhil      | Researching metrics, $R^2$ metric research, Report analysis/results section, creating slides, recording     |
 
 
 # References
