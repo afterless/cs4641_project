@@ -83,7 +83,7 @@ Next steps would include continued testing beyond the hyperparameters tested her
 
 # Proposed Timeline
 
-A link to our proposed timeline can be found [here](https://gtvault-my.sharepoint.com/:x:/g/personal/achennak3_gatech_edu/EZ1I5nr8EHFFreTAaKHqq60BgQprp8ddwrU7rgxkhf2eEA?e=9goeF5)
+A link to our proposed timeline can be found [here](https://gtvault-my.sharepoint.com/:x:/g/personal/achennak3_gatech_edu/EdwsimnMOHZPgECYb5E2FEkBeykYujStEl6YDc02nrw4WQ?e=RJg3qE)
 
 # Contribution Table
 
@@ -106,7 +106,7 @@ A link to our proposed timeline can be found [here](https://gtvault-my.sharepoin
 
 [4] X. Geerinck, “Artificial Intelligence — How to measure performance — Accuracy, Precision, Recall, F1, ROC, RMSE, F-Test and R-Squared,” Medium, Jan. 03, 2020. Accessed: Oct. 06, 2023. [Online]. Available: https://medium.com/@xaviergeerinck/artificial-intelligence-how-to-measure-performance-accuracy-precision-recall-f1-roc-rmse-611d10e4caac
 
-[5] https://arxiv.org/abs/1810.04805
+[5] Devlin, J., Chang, M. W., Lee, K., & Toutanova, K. (2018). Bert: Pre-training of deep bidirectional transformers for language understanding. arXiv preprint arXiv:1810.04805.  
 
 # Appendix
 
