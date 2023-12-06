@@ -43,7 +43,7 @@ The two models were tested across 5 learning rates: 1e-6, 5e-6, 1e-5, 5e-5, and 
 
 Looking into the performance of the first model, the highest R2 value was achieved using a learning rate of 5e-6, resulting in approximately 0.642. This run also had the lowest MSE. But, using a learning rate of 5e-5 resulted in lower mean and median absolute values, approximately $24,000 and $14,000 respectively. Besides the learning rate, the random seed used can have a drastic impact on fine-tuning performance. It is interesting to see that there is not a single specific set of hyperparameters that optimizes all metrics for model 1. This means that we need to utilize different models if we want to optimize performance for different specific metrics.
 
-For the second model, the highest R2 value was achieved using a learning rate of 1e-5, resulting in approximately 0.654. This run also had the lowest MSE value, mean absolute error (~$23700), and median absolute error (~$17000). Figure
+For the second model, the highest R2 value was achieved using a learning rate of 1e-5, resulting in approximately 0.654. This run also had the lowest MSE value, mean absolute error (~\$23700), and median absolute error (~\$17000). Figure
 
 Comparing between models 1 and 2, model 2 performs slightly better with a higher R2 score and lower MSE value. There is not a considerable difference, though. Because model 2 required extra text preprocessing for very minimal improvement in performance, this experiment shows that this might not be worth the extra computational resources needed to do that extra preprocessing. Although this preprocessing can reduce the complexity of the data, some of the nuance that can be present in complete sentences will be lost. This nuance and contextualization can be captured by BERT, which is one of its highlights as a transformer-based model [5]. So, this could potentially be a limitation for model 2.  
 
@@ -89,8 +89,7 @@ A link to our proposed timeline can be found [here](https://gtvault-my.sharepoin
 
 | Team Member | Contributions                                                                                            |
 |-------------|----------------------------------------------------------------------------------------------------------|
-| Akul        | Data preprocessing, report analysis/results section, model building, methods, testing, creating slides,  |
-|             | recording, video editing                                                                                 |
+| Akul        | Data preprocessing, report analysis/results section, model building, methods, testing, creating slides, recording, video editing  |
 | Alex        | Report analysis/results section, results visualization, Gantt Chart, testing, creating slides, recording |
 | Ayush       | Report analysis/results section, GitHub page management, model building, recording                       |
 | Bao         | Report analysis/results section, R2 metric research, metrics analysis, introduction, creating slides     |
@@ -137,23 +136,23 @@ A link to our proposed timeline can be found [here](https://gtvault-my.sharepoin
 
 ### Figure 6: Model 2 Results with 1e-6 Learning Rate
 
-![image](./res/mode2_1e6_results.png)
+![image](./res/model2_1e6_results.png)
 
 ### Figure 7: Model 2 Results with 5e-6 Learning Rate
 
-![image](./res/mode2_5e6_results.png)
+![image](./res/model2_5e6_results.png)
 
 ### Figure 8: Model 2 Results with 1e-5 Learning Rate
 
-![image](./res/mode2_1e5_results.png)
+![image](./res/model2_1e5_results.png)
 
 ### Figure 9: Model 2 Results with 5e-5 Learning Rate
 
-![image](./res/mode2_5e5_results.png)
+![image](./res/model2_5e5_results.png)
 
 ### Figure 10: Model 2 Results with 1e-4 Learning Rate
 
-![image](./res/mode2_1e4_results.png)
+![image](./res/model2_1e4_results.png)
 
 ### Figure 11: Model 2 Absolute Error Visualization
 
